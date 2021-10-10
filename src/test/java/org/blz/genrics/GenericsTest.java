@@ -13,7 +13,7 @@ public class GenericsTest
     public void given3Values_WhenGetMaximum_ShouldReturnCorrectValue()
 
     {
-      int actualResult= Maximum.getMaximum(10,20,30);
+      int actualResult= Maximum.getMaximum(30,10,20);
         Assert.assertEquals(30,actualResult);
     }
 }
