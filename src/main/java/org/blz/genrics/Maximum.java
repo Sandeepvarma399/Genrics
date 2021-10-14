@@ -12,35 +12,14 @@ public class Maximum {
         getMaximum(s1, s2, s3);
     }
 
-    public static Integer getMaximum(Integer a, Integer b, Integer c) {
-        Integer max = b;
+    public static <E extends Comparable> E getMaximum(E a, E b, E c) {
+        E max = b;
         if (a.compareTo(b) > 0 && a.compareTo(c) > 0) {
             max = a;
         } else if (c.compareTo(max) > 0) {
             max = c;
         }
-        System.out.println(max);
-        return max;
-    }
 
-    public static Float getMaximum(Float a, Float b, Float c) {
-        Float max = b;
-        if (a.compareTo(b) > 0 && a.compareTo(c) > 0) {
-            max = a;
-        } else if (c.compareTo(max) > 0) {
-            max = c;
-        }
-        System.out.println(max);
-        return max;
-    }
-
-    public static String getMaximum(String a, String b, String c) {
-        String max = b;
-        if (a.compareTo(b) > 0 && a.compareTo(c) > 0) {
-            max = a;
-        } else if (c.compareTo(max) > 0) {
-            max = c;
-        }
         System.out.println(max);
         return max;
 
