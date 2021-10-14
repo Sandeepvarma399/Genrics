@@ -27,7 +27,14 @@ public class GenericsTest {
         Assert.assertEquals("peach", actualResult);
     }
 
-
+    @Test
+    public void givenStringValues_WhenGetMaximum_ShouldReturnCorrectValue() {
+        String actualResult = Maximum.getMaximum("Apple", "Peach", "Banana", "Mango","Strawberry");
+        Assert.assertEquals("Strawberry", actualResult);
+    }
 }
+
+
+
 
 
