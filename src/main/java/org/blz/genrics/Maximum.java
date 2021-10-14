@@ -1,35 +1,31 @@
 package org.blz.genrics;
 
 
-public class Maximum < E extends Comparable> {
-    E value1;
-    E value2;
-    E value3;
+public class Maximum<E extends Comparable> {
+    E value1, value2, value3;
 
-    Maximum(E value1, E value2, E value3) {
+    public Maximum(E value1, E value2, E value3) {
         this.value1 = value1;
         this.value2 = value2;
         this.value3 = value3;
     }
-    public static void main(String[] args) {
-        Integer a = 30, b = 10, c = 20;
-        Float d = 40f, e = 10f, f = 30f;
-        String s1 = "apple", s2 = "peach", s3 = "banana";
-        getMaximum(a, b, c);
-        getMaximum(d, e, f);
-        getMaximum(s1, s2, s3);
+
+    public E testMaximum() {
+        E getMax = getMaximum(value1, value2, value3);
+        return getMax;
     }
 
-    public static <E extends Comparable> E getMaximum(E a, E b, E c) {
-        E max = b;
-        if (a.compareTo(b) > 0 && a.compareTo(c) > 0) {
-            max = a;
-        } else if (c.compareTo(max) > 0) {
-            max = c;
-        }
-
-        System.out.println(max);
+    public static <E extends Comparable> E getMaximum(E value1, E value2, E value3) {
+        E max = value1;
+        if (value2.compareTo(value1) > 0 && value2.compareTo(value3) > 0)
+            max = value2;
+        else if (value3.compareTo(value2) > 0 && value3.compareTo(value1) > 0)
+            max = value3;
+        toPrint(value1, value2, value3, max);
         return max;
+    }
 
+    private static <E> void toPrint(E value1, E value2, E value3, E max) {
+        System.out.println("Max of "+value1+" , "+value2+" , "+value3+" is: "+max);
     }
 }

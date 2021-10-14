@@ -1,6 +1,6 @@
 package org.blz.genrics;
 
-import static org.junit.Assert.assertTrue;
+
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -26,5 +26,8 @@ public class GenericsTest {
         String actualResult = Maximum.getMaximum("apple", "peach", "banana");
         Assert.assertEquals("peach", actualResult);
     }
+
+
 }
+
 
