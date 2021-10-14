@@ -1,8 +1,16 @@
 package org.blz.genrics;
 
 
-public class Maximum {
+public class Maximum < E extends Comparable> {
+    E value1;
+    E value2;
+    E value3;
 
+    Maximum(E value1, E value2, E value3) {
+        this.value1 = value1;
+        this.value2 = value2;
+        this.value3 = value3;
+    }
     public static void main(String[] args) {
         Integer a = 30, b = 10, c = 20;
         Float d = 40f, e = 10f, f = 30f;
